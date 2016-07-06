@@ -1,6 +1,6 @@
 import arcpy
 
-arcpy.env.workspace = "U:/Shared/GIS/Projects/GFC/LookoutPilot/lm_grids.gdb"
+arcpy.env.workspace = "U:/Shared/GIS/Projects/GFC/LookoutPilot/lm_AEA.gdb"
 
 def unique_values(table, field):
     with arcpy.da.SearchCursor(table, [field]) as cursor:
