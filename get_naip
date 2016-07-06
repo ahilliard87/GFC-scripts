@@ -1,0 +1,7 @@
+import arcpy
+
+arcpy.env.workspace = "U:/Shared/GIS/Projects/GFC/LookoutPilot/lm_grids.gdb"
+
+def unique_values(table, field):
+    with arcpy.da.SearchCursor(table, [field]) as cursor:
+        return sorted({row[0] for row in cursor})         
